@@ -4,7 +4,12 @@ pipeline{
     }
     options{ 
         disableConcurrentBuilds()
-		disableRemotePoll()
+		throttleJobProperty(
+			categories: ['test_limit1'],
+			throttleEnabled: true,
+			throttleOption: 'category'
+		)
+    }
     }	
     stages{
         stage('Delay'){
