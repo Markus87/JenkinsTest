@@ -4,6 +4,7 @@ pipeline{
     }
     options{ 
         disableConcurrentBuilds()
+		disableRemotePoll()
     }	
     stages{
         stage('Delay'){
