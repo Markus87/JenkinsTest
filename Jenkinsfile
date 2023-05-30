@@ -9,7 +9,6 @@ pipeline{
 			throttleEnabled: true,
 			throttleOption: 'category'
 		)
-    }
     }	
     stages{
         stage('Delay'){
